@@ -1,0 +1,11 @@
+{
+    id: ,
+    question: '',
+    answers: {
+        A: '',
+        B: '',
+        C: ''
+    },
+    correctAnswers: [],
+    image: true,
+},

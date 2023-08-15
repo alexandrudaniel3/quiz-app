@@ -1,11 +1,16 @@
 import React, {useEffect, useState} from "react";
 import QuestionBox from "../components/QuestionBox";
+import './styles/Quiz.css';
+import {useTimer} from "react-timer-hook";
+import Timer from "../components/Timer";
 
 export default function Quiz() {
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [correctAnswers, setCorrectAnswers] = useState(0);
     const [wrongAnswers, setWrongAnswers] = useState(0);
     const [data, setData] = useState([]);
+    const [timeLeft, setTimeLeft] = useState(true);
+
     let testData = [
         {
             id: 1,
@@ -341,23 +346,31 @@ export default function Quiz() {
     }
 
     const displayQuiz = () => {
-        if (currentQuestion < data.length) {
+        if (currentQuestion < data.length && timeLeft === true) {
             return showQuestion();
         } else {
             return showOver();
         }
     }
 
+    const skipQuestion = () => {
+        setData(currentQuestions => [...currentQuestions, data[currentQuestion]]);
+        nextQuestion();
+    }
+
     const showQuestion = () => {
         return (
-            <QuestionBox data={data[currentQuestion]} submitHandler={(correct) => {
-                nextQuestion();
-                if (correct) {
-                    setCorrectAnswers(correctAnswers + 1);
-                } else {
-                    setWrongAnswers(wrongAnswers + 1);
-                }
-            }}/>
+            <QuestionBox
+                data={data[currentQuestion]}
+                submitHandler={(correct) => {
+                    nextQuestion();
+                    if (correct) {
+                        setCorrectAnswers(correctAnswers + 1);
+                    } else {
+                        setWrongAnswers(wrongAnswers + 1);
+                    }
+                }}
+                skipHandler={skipQuestion}/>
         )
     }
 
@@ -387,10 +400,30 @@ export default function Quiz() {
     }
     return (
         <div className='quiz-page'>
+            <div className='timer-container'>
+                Timp rămas:
+                <Timer timeOutHandler={() => setTimeLeft(false)}/>
+            </div>
             {displayQuiz()}
-            <div className='correct-answers'>
-                correct: {correctAnswers}
-                wrong: {wrongAnswers}
+            <div className='statistics-container'>
+                <div className='questions-left'>
+                    Întrebări rămase:
+                    <div className='number-container'>
+                        <p>{data.length - currentQuestion}</p>
+                    </div>
+                </div>
+                <div className='correct-answers'>
+                    Răspunsuri corecte:
+                    <div className='number-container'>
+                        <p>{correctAnswers}</p>
+                    </div>
+                </div>
+                <div className='wrong-answers'>
+                    Răspunsuri greșite:
+                    <div className='number-container'>
+                        <p>{wrongAnswers}</p>
+                    </div>
+                </div>
             </div>
         </div>
     )

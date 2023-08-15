@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import Option from "./Option";
+import './styles/QuestionBox.css';
 
 function arrayEquals(a, b) {
     return Array.isArray(a) &&
@@ -8,7 +9,7 @@ function arrayEquals(a, b) {
         a.every((val, index) => val === b[index]);
 }
 
-export default function QuestionBox({data, submitHandler}) {
+export default function QuestionBox({data, submitHandler, skipHandler}) {
     const [selectedOptions, setSelectedOptions] = useState([]);
     const answer = data.correctAnswers;
 
@@ -67,15 +68,25 @@ export default function QuestionBox({data, submitHandler}) {
                 </div>
                 {showImage()}
             </div>
-            <button className='submit-answers-button' onClick={() => {
-                if (selectedOptions.length === 0) {
-                    return;
-                } else {
-                    submitHandler(checkAnswer());
-                }
-            }}>
-                Submit
-            </button>
+            <div className='buttons'>
+                <div className='skip-question-button-container'>
+                    <button className='skip-question-button' type='submit' onClick={skipHandler}>
+                        Sari peste
+                    </button>
+                </div>
+                <div className='submit-answers-button-container'>
+                    <button className='submit-answers-button' type='submit' onClick={() => {
+                        if (selectedOptions.length === 0) {
+                            return;
+                        } else {
+                            submitHandler(checkAnswer());
+                        }
+                    }}>
+                        <span>Trimite</span>
+                    </button>
+                </div>
+            </div>
+
         </div>
     )
 }

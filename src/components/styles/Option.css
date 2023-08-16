@@ -16,11 +16,12 @@
     flex-direction: row;
     padding: 0;
     align-items: center;
+    -webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.32);
+    box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.32);
 }
 
 .option:hover {
     cursor: pointer;
-
 }
 
 .option-key {

@@ -1,5 +1,10 @@
 .timer {
-    margin-left: 10px;
-    padding: 0;
-    width: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.timer > p {
+    margin: 5px;
 }

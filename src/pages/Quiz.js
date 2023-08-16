@@ -400,10 +400,7 @@ export default function Quiz() {
     }
     return (
         <div className='quiz-page'>
-            <div className='timer-container'>
-                Timp rămas:
                 <Timer timeOutHandler={() => setTimeLeft(false)}/>
-            </div>
             {displayQuiz()}
             <div className='statistics-container'>
                 <div className='questions-left'>

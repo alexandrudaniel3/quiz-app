@@ -5,14 +5,6 @@
     padding: 20px;
 }
 
-.timer-container {
-    display: flex;
-    align-items: center;
-    margin: auto;
-    justify-content: center;
-    text-align: center;
-}
-
 .number-container {
     background-color: white;
     width: 30px;
@@ -27,6 +19,7 @@
 .statistics-container {
     display: flex;
     margin: 30px auto 0 auto;
+    color: white;
 }
 
 .number-container > p {
@@ -35,10 +28,13 @@
 
 .wrong-answers > .number-container {
     border: red solid 5px;
+    color: black;
+
 }
 
 .correct-answers > .number-container {
     border: green solid 5px;
+    color: black;
 }
 
 .wrong-answers, .correct-answers, .questions-left {

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Option from "./Option";
 import './styles/QuestionBox.css';
+import ImagePopup from "./ImagePopup";
 
 function arrayEquals(a, b) {
     return Array.isArray(a) &&
@@ -11,6 +12,8 @@ function arrayEquals(a, b) {
 
 export default function QuestionBox({data, submitHandler, skipHandler}) {
     const [selectedOptions, setSelectedOptions] = useState([]);
+    const [showPopup, setShowPopup] = useState(false);
+    const [imageIsHovered, setImageIsHovered] = useState(false);
     const answer = data.correctAnswers;
 
     useEffect(() => {
@@ -42,12 +45,38 @@ export default function QuestionBox({data, submitHandler, skipHandler}) {
         } else {
             return (
                 <div className='question-image-container'>
-                    <img className='question-image' src={require(`../assets/${data.id}.jpeg`)}/>
+                    <img className='question-image'
+                         src={require(`../assets/${data.id}.jpeg`)}
+                         onClick={() => setShowPopup(true)}
+                    //     onMouseEnter={() => setImageIsHovered(true)}
+                    // onMouseLeave={() => setImageIsHovered(false)}
+                    />
                 </div>
             )
         }
     }
 
+    const showImagePopup = () => {
+        if (!showPopup) {
+            return;
+        } else {
+            return <ImagePopup
+                source={require(`../assets/${data.id}.jpeg`)}
+                closeHandler={() => {
+                    setShowPopup(false);
+                }}/>
+        }
+    }
+
+    const showMagnifyingGlass = () => {
+        if (!imageIsHovered) {
+            return;
+        } else {
+            return (<div className='magnifying-glass-container'>
+                <img className='magnifying-glass' src={require(`../assets/zoom-icon.png`)} />
+            </div>)
+        }
+    }
 
     return (
         <div className='question-box'>
@@ -67,6 +96,7 @@ export default function QuestionBox({data, submitHandler, skipHandler}) {
                     ))}
                 </div>
                 {showImage()}
+                {showImagePopup()}
             </div>
             <div className='buttons'>
                 <div className='skip-question-button-container'>

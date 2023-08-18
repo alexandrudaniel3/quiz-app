@@ -1,0 +1,13 @@
+.header {
+    background-color: black;
+}
+
+.logo {
+    color: white;
+    margin: 0;
+    user-select: none;
+}
+
+.logo:hover {
+    cursor: pointer;
+}

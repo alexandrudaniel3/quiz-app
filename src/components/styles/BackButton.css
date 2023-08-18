@@ -1,0 +1,22 @@
+* {
+    /*border: dashed 1px;*/
+}
+.back-button-container {
+    width: 300px;
+    height: 96px;
+    background-image: url("../../assets/back-button.png");
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.back-button-container:hover {
+    cursor: pointer;
+}
+
+.back-button-text {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}

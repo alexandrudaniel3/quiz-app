@@ -1,0 +1,32 @@
+.home-page {
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 100%;
+    width: 80%;
+}
+
+.home-banner {
+    height: 200px;
+}
+
+.home-body{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+.home-option-top {
+    margin-top: 0;
+    width: 33%;
+}
+
+.home-option-bottom {
+    margin-top: 10%;
+    width: 33%;
+}

@@ -1,0 +1,23 @@
+/** {*/
+/*    border: 1px dashed;*/
+/*}*/
+
+.signs-page {
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 100%;
+    width: 80%;
+    align-items: center;
+}
+
+.signs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    margin: auto;
+}
+
+.grid-item {
+    display: block;
+    margin: auto auto 20px;
+}

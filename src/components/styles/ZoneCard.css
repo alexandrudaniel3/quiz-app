@@ -1,0 +1,33 @@
+.zone-card-container {
+    width: 300px;
+    height: 350px;
+    padding: 0;
+    display: flex;
+}
+
+.zone-card {
+    width: 90%;
+    height: 90%;
+    background-color: #0761ac;
+    margin: auto;
+    padding: 5%;
+    border-radius: 25px;
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.32);
+    box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.32);
+}
+
+.zone-card:hover {
+    cursor: pointer;
+}
+
+.zone-card-image-container {
+    margin: auto;
+}
+
+.zone-card-image {
+    object-fit: fill;
+}
+
+.zone-card-title {
+    color: white;
+}

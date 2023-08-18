@@ -1,0 +1,23 @@
+.legislation-page {
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 100%;
+    width: 80%;
+}
+
+.legislation-banner {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.legislation-title {
+    width: 60%;
+    justify-content: center;
+}
+
+.ant-collapse-content-box > p {
+    text-align: left;
+    white-space: pre-wrap;
+}

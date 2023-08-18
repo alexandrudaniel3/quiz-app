@@ -6,27 +6,42 @@
 }
 
 .home-banner {
-    height: 200px;
+    height: 150px;
+    font-size: x-large;
 }
 
-.home-body{
-    display: flex;
-    flex-direction: row;
+.home-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     margin: auto;
-    align-items: center;
-    justify-content: center;
 }
 
-.button:hover{
+.button {
+    padding: 10px;
+    margin: 15px;
+    border: 3px solid;
+    border-radius: 25px;
+    -webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.32);
+    box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.32);
+}
+
+.button:hover {
     cursor: pointer;
+    background: rgb(224, 224, 224);
+}
+
+.button:active {
+    margin-top: 18px;
+    margin-left: 18px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 .home-option-top {
     margin-top: 0;
-    width: 33%;
 }
 
 .home-option-bottom {
-    margin-top: 10%;
-    width: 33%;
+    margin-top: 100px;
 }

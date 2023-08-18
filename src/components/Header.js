@@ -6,7 +6,7 @@ export default function Header() {
     return (
         <div className='header'>
             <div className='logo-container'>
-                <h1 className='logo' onClick={() => navigation('/')}>Logo</h1>
+                <h1 className='logo' onClick={() => navigation('/')}>Învață Codul Rutier</h1>
             </div>
         </div>
     )

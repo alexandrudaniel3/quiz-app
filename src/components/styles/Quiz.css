@@ -48,3 +48,10 @@
     background-color: #02579c;
     color: white;
 }
+
+.winner-text {
+    color: #4af185;
+}
+.loser-text {
+    color: #850202;
+}

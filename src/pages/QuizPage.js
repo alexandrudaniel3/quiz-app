@@ -31,7 +31,14 @@ export default function QuizPage() {
         if (!params.state) {
             return welcomeToQuiz();
         } else if (params.state === 'test') {
-            return <Quiz />;
+            return (
+                <div className='test'>
+                    <Quiz />
+                    <div className='test-reset-button-container' onClick={() => window.location.reload() }>
+                        <button className='test-reset-button'>Test nou</button>
+                    </div>
+                </div>
+            );
         }
     }
     return (

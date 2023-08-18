@@ -4,11 +4,12 @@
 
 .back-button-container {
     width: 310px;
+    margin: 0;
 }
 
 .back-button-wrapper {
-    width: 300px;
-    height: 96px;
+    width: 150px;
+    height: 48px;
     background-image: url("../../assets/back-button.png");
     background-size: cover;
     border-radius: 10px;

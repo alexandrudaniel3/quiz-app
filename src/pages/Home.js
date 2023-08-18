@@ -10,20 +10,20 @@ export default function Home() {
                 <h1>Bun Venit!</h1>
             </div>
             <div className='home-body'>
-                <div className='home-option-top' onClick={() => navigation('/legislatie')}>
-                    <div className='button'>
+                <div className='home-option-top'>
+                    <div className='button' onClick={() => navigation('/legislatie')}>
                         <img src={require('../assets/police.png')}/>
                         <h3>Codul Rutier</h3>
                     </div>
                 </div>
-                <div className='home-option-bottom' onClick={() => navigation('/quiz')}>
-                    <div className='button'>
+                <div className='home-option-bottom'>
+                    <div className='button' onClick={() => navigation('/quiz')}>
                         <img src={require('../assets/quiz.png')}/>
                         <h3>Chestionare Auto</h3>
                     </div>
                 </div>
-                <div className='home-option-top' onClick={() => navigation('/semne')}>
-                    <div className='button'>
+                <div className='home-option-top'>
+                    <div className='button' onClick={() => navigation('/semne')}>
                         <img src={require('../assets/stop-sign.png')}/>
                         <h3>Indicatoare Rutiere</h3>
                     </div>

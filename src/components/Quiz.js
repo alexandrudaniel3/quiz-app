@@ -66,7 +66,11 @@ export default function Quiz() {
     const showWinner = () => {
         return (
             <div className='winner'>
-                You won!
+                <div className='winner-announcement-container'>
+                    <h1 className='winner-text'>
+                        ADMIS!
+                    </h1>
+                </div>
             </div>
         )
     }
@@ -74,13 +78,18 @@ export default function Quiz() {
     const showLoser = () => {
         return (
             <div className='loser'>
-                You lost!
+                <div className='loser-announcement-container'>
+                    <h1 className='loser-text'>
+                        RESPINS!
+                    </h1>
+                </div>
             </div>
         )
     }
+
     return (
             <div className='quiz-container'>
-                <Timer timeOutHandler={() => setTimeLeft(false)}/>
+                {<Timer timeOutHandler={() => setTimeLeft(false)}/>}
                 {displayQuiz()}
                 <div className='statistics-container'>
                     <div className='questions-left'>

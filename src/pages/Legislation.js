@@ -1,10 +1,13 @@
 import './styles/Legislation.css';
 import {Collapse} from "antd";
 import legislationData from "../legislationData";
-import BackButton from "../components/BackButton";
+import Banner from "../components/Banner";
+import {useNavigate} from "react-router";
 
 
 export default function Legislation() {
+    const navigation = useNavigate();
+
     const items = legislationData.map((element, index) => {
         return {
             key: index,
@@ -15,10 +18,10 @@ export default function Legislation() {
 
     return (
         <div className='legislation-page'>
-            <div className='legislation-banner'>
-                <BackButton />
-                <h1 className='legislation-title'>Lorem ipsum</h1>
-            </div>
+            <Banner
+                title={'Codul Rutier'}
+                backButtonHandler={() => navigation('/')}
+            />
             <Collapse accordion={true} items={items}/>
         </div>
     )

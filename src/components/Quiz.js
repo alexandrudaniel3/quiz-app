@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from "react";
-import QuestionBox from "../components/QuestionBox";
+import QuestionBox from "./QuestionBox";
 import './styles/Quiz.css';
 import {useTimer} from "react-timer-hook";
 import testData from "../testData";
-import Timer from "../components/Timer";
+import Timer from "./Timer";
+import Banner from "./Banner";
 
 export default function Quiz() {
     const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -78,29 +79,29 @@ export default function Quiz() {
         )
     }
     return (
-        <div className='quiz-page'>
+            <div className='quiz-container'>
                 <Timer timeOutHandler={() => setTimeLeft(false)}/>
-            {displayQuiz()}
-            <div className='statistics-container'>
-                <div className='questions-left'>
-                    Întrebări rămase:
-                    <div className='number-container'>
-                        <p>{data.length - currentQuestion}</p>
+                {displayQuiz()}
+                <div className='statistics-container'>
+                    <div className='questions-left'>
+                        Întrebări rămase:
+                        <div className='number-container'>
+                            <p>{data.length - currentQuestion}</p>
+                        </div>
                     </div>
-                </div>
-                <div className='correct-answers'>
-                    Răspunsuri corecte:
-                    <div className='number-container'>
-                        <p>{correctAnswers}</p>
+                    <div className='correct-answers'>
+                        Răspunsuri corecte:
+                        <div className='number-container'>
+                            <p>{correctAnswers}</p>
+                        </div>
                     </div>
-                </div>
-                <div className='wrong-answers'>
-                    Răspunsuri greșite:
-                    <div className='number-container'>
-                        <p>{wrongAnswers}</p>
+                    <div className='wrong-answers'>
+                        Răspunsuri greșite:
+                        <div className='number-container'>
+                            <p>{wrongAnswers}</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     )
 }

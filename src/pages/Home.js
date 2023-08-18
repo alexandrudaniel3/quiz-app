@@ -7,7 +7,7 @@ export default function Home() {
     return (
         <div className='home-page'>
             <div className='home-banner'>
-                <h1>Lorem ipsum</h1>
+                <h1>Bun Venit!</h1>
             </div>
             <div className='home-body'>
                 <div className='home-option-top' onClick={() => navigation('/legislatie')}>

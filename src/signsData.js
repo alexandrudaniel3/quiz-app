@@ -14,6 +14,11 @@ const signsData = [
                 description: 'Este amplasat la cel mult 200 m de o curba la stanga. Conducatorul trebuie sa circule cu viteza redusa in curbe, iar daca vizibilitatea este redusa sub 50 m., toate manevrele (depasirea, oprirea, stationarea, mersul inapoi, intoarcerea) sunt interzise.',
             },
             {
+                id: 'drum-aglomerat',
+                title: 'Drum aglomerat',
+                description: 'La intalnirea acestui indicator conducatorul auto este obligat sa pastreza o distanta de siguranta fata de vehiculul care se deplaseaza in fata sa. Se amplaseaza pe drumurile publice pe care traficul este intens.',
+            },
+            {
                 id: 'curbe-succesive-dreapta',
                 title: 'Curbă dublă sau o succesiune de mai multe curbe, prima la dreapta',
                 description: 'Indicatorul se instaleaza atunci cand urmeaza o succesiune de curbe daca distanta dintre acestea e mai mica de 250 m. Se amplaseaza la 100-200 m inaintea primei curbe. Aceste indicatoare pot fi insotite si de panouri aditionale pe care este specificata distanta pana la terminarea sectorului de drum periculos daca lungimea acestuia depaseste 1000 m. Canducatorul trebuie sa circule cu viteza redusa in curbe iar daca vizibilitatea este redusa toate manevrele (depasirea oprirea stationarea mersul inapoi intoarcerea) sunt interzise.',
@@ -29,9 +34,14 @@ const signsData = [
                 description: 'Indicatoarele se amplaseaza la 100-200 m de locul in care sectorul de drum incepe sa se ingusteze pe ambele parti cu cel putin jumatate de metru. La intalnirea acestui indicator conducatorul auto este obligat sa reduca viteza iar manevrele de oprire stationare mersul inapoi si intoarcerea sunt interzise. Indicatorul poate fi insotit si de indicatoare pentru reglementarea prioritatii de drum ingustat. In acest caz toate manevrele sunt interzise (inclusiv depasirea).',
             },
             {
-                id: 'drum-ingustat-stanga',
-                title: 'Drum îngustat pe partea stângă',
-                description: 'Indicatoarele se amplaseaza la 100-200 m de locul in care sectorul de drum incepe sa se ingusteze pe partea stanga cu cel putin jumatate de metru. La intalnirea acestui indicator conducatorul auto este obligat sa reduca viteza iar manevrele de oprire.',
+                id: 'coborare-periculoasa',
+                title: 'Coborâre periculoasă',
+                description: 'Indicatorul alaturat se amplaseaza la 100-200 m de inceputul sectorului de drum cand panta depaseste 7%. Conducatorul auto nu este obligat sa reduca viteza dar nu are voie sa stationeze pe toata lungimea pantei. Daca in varful pantei vizibilitatea este redusa sub 50 m toate manevrele sunt interzise. Daca drumul nu este suficient de lat pentru a permite trecerea a doua vehicule unul pe langa celalalt are prioritate cel care urca fata de cel care coboara.',
+            },
+            {
+                id: 'urcare-inclinatie',
+                title: 'Urcare cu înclinație mare',
+                description: 'Se instaleaza la 100-200 m de inceputul sectorului de drum cand panta depaseste 7%. Conducatorul auto nu este obligat sa reduca viteza dar toate manevrele sunt interzise. Daca drumul nu este suficient de lat pentru a permite trecerea a doua vehicule unul pe langa celalalt are prioritate cel care urca fata de cel care coboara.',
             },
             {
                 id: 'drum-ingustat-dreapta',
@@ -39,9 +49,9 @@ const signsData = [
                 description: 'Indicatoarele se amplaseaza la 100-200 m de locul in care sectorul de drum incepe sa se ingusteze pe partea dreapta cu cel putin jumatate de metru. La intalnirea acestui indicator conducatorul auto este obligat sa reduca viteza iar manevrele de oprire stationare mersul inapoi si intoarcerea sunt interzise. Indicatorul poate fi insotit si de indicatoare pentru reglementarea prioritatii de drum ingustat. In acest caz toate manevrele sunt interzise (inclusiv depasirea).',
             },
             {
-                id: 'drum-aglomerat',
-                title: 'Drum aglomerat',
-                description: 'La intalnirea acestui indicator conducatorul auto este obligat sa pastreza o distanta de siguranta fata de vehiculul care se deplaseaza in fata sa. Se amplaseaza pe drumurile publice pe care traficul este intens.',
+                id: 'drum-ingustat-stanga',
+                title: 'Drum îngustat pe partea stângă',
+                description: 'Indicatoarele se amplaseaza la 100-200 m de locul in care sectorul de drum incepe sa se ingusteze pe partea stanga cu cel putin jumatate de metru. La intalnirea acestui indicator conducatorul auto este obligat sa reduca viteza iar manevrele de oprire.',
             },
             {
                 id: 'pan-suc-curba-deosebit-periculoasa',
@@ -52,16 +62,6 @@ const signsData = [
                 id: 'curba-deosebit-periculoasa',
                 title: 'Curbă deosebit de periculoasă',
                 description: 'Indicatorul se monteaza in curbe cu raze mai mici de 100 m sensul sagetilor indicand sensul virajului. Canducatorul trebuie sa circule cu viteza redusa in curba toate manevrele (depasirea oprirea stationarea mersul inapoi intoarcerea) fiind interzise.',
-            },
-            {
-                id: 'coborare-periculoasa',
-                title: 'Coborâre periculoasă',
-                description: 'Indicatorul alaturat se amplaseaza la 100-200 m de inceputul sectorului de drum cand panta depaseste 7%. Conducatorul auto nu este obligat sa reduca viteza dar nu are voie sa stationeze pe toata lungimea pantei. Daca in varful pantei vizibilitatea este redusa sub 50 m toate manevrele sunt interzise. Daca drumul nu este suficient de lat pentru a permite trecerea a doua vehicule unul pe langa celalalt are prioritate cel care urca fata de cel care coboara.',
-            },
-            {
-                id: 'urcare-inclinatie',
-                title: 'Urcare cu înclinație mare',
-                description: 'Se instaleaza la 100-200 m de inceputul sectorului de drum cand panta depaseste 7%. Conducatorul auto nu este obligat sa reduca viteza dar toate manevrele sunt interzise. Daca drumul nu este suficient de lat pentru a permite trecerea a doua vehicule unul pe langa celalalt are prioritate cel care urca fata de cel care coboara.',
             },
             {
                 id: 'acostament',
@@ -232,14 +232,14 @@ const signsData = [
         title: 'Prioritate',
         content: [
             {
-                id:'stop',
-                title:'Oprire',
-                description: 'Este instalat pe drumul public fara prioritate, la intersectia acestuia cu un drum public prioritar, cand vizibilitatea este redusa. Conducatorul de vehicul care intalneste acest indicator este obligat sa opreasca in locul cu vizibilitate maxima, fara a depasi coltul intersectiei, si sa acorde prioritate tuturor vehiculelor care circula pe drumul prioritar.',
-            },
-            {
                 id:'cedeaza',
                 title:'Cedează trecerea',
                 description: 'Se amplaseaza pe drumul public fara prioritate, la intersectia acestuia cu un drum public prioritar. La intalnirea acestui indicator, conducatorul auto este obligat sa reduca viteza si sa se asigure ca pe drumul prioritar nu circula autovehicule, si abia apoi poate sa patrunda in intersectie. Daca pe drumul prioritar circula alte autovehicule, conducatorul auto este obligat sa opreasca pentru a le acorda prioritate.',
+            },
+            {
+                id:'stop',
+                title:'Oprire',
+                description: 'Este instalat pe drumul public fara prioritate, la intersectia acestuia cu un drum public prioritar, cand vizibilitatea este redusa. Conducatorul de vehicul care intalneste acest indicator este obligat sa opreasca in locul cu vizibilitate maxima, fara a depasi coltul intersectiei, si sa acorde prioritate tuturor vehiculelor care circula pe drumul prioritar.',
             },
             {
                 id:'prioritate',

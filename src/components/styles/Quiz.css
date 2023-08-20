@@ -55,3 +55,19 @@
 .loser-text {
     color: #850202;
 }
+
+@media only screen and (max-width: 700px) {
+    .statistics-container {
+        flex-direction: column;
+    }
+
+    .statistics-container > div {
+        margin: 5px auto 5px auto;
+    }
+
+    .quiz-container {
+        width: auto;
+        margin: auto;
+        padding: 20px;
+    }
+}

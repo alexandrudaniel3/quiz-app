@@ -34,3 +34,19 @@
     left: 55%;
     transform: translate(-50%, -50%);
 }
+
+@media only screen and (max-width: 850px) {
+    .back-button-container {
+        margin: auto;
+    }
+
+    .back-button-wrapper {
+        margin: auto;
+    }
+
+    .back-button-wrapper:active {
+        margin: auto;
+        -webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.32);
+        box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.32);
+    }
+}

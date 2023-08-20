@@ -8,7 +8,7 @@ export default function ImagePopup({source, closeHandler}) {
     return (
         <div className='image-popup-full' onClick={closeHandler}>
             <div className='image-popup-container' onClick={containerClickHandler}>
-                <img className='image-popup-' src={source}/>
+                <img className='image-popup' src={source}/>
                 <div className='image-popup-back-button-container'>
                     <button className='image-popup-back-button' onClick={closeHandler}>Închide</button>
                 </div>

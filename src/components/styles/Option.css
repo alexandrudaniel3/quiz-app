@@ -59,3 +59,14 @@
     font-size: medium;
     width: 90%;
 }
+
+@media only screen and (max-width: 700px) {
+    .option-container {
+        height: 70px;
+    }
+
+    .option-key {
+        line-height: 1.8;
+        width: 15%;
+    }
+}

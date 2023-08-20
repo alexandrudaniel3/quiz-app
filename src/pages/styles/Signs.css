@@ -22,3 +22,15 @@
     margin: 0 auto 20px;
 }
 
+@media only screen and (max-width: 1150px) {
+    .categories-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+}

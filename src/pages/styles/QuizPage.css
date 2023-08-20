@@ -13,7 +13,7 @@
     border: 2px solid;
     border-radius: 10px;
     background: white;
-    margin: 0;
+    margin: 0 0 20px 0;
     -webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.32);
     box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.32);
 }
@@ -32,4 +32,11 @@
 
 .test-reset-button-container {
     margin-top: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+    .quiz-page {
+        padding: 0;
+        width: 100%;
+    }
 }

@@ -42,3 +42,15 @@
 .image-popup-back-button:hover {
     cursor: pointer;
 }
+
+.image-popup {
+    width: 90%;
+}
+
+@media only screen and (max-width: 800px) {
+    .image-popup-container {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

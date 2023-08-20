@@ -14,12 +14,14 @@ export default function QuestionBox({data, submitHandler, skipHandler}) {
     const [selectedOptions, setSelectedOptions] = useState([]);
     const [showPopup, setShowPopup] = useState(false);
     const [imageIsHovered, setImageIsHovered] = useState(false);
+    const [displayNoAnswerWarning, setDisplayNoAnswerWarning] = useState(false);
     const answer = data.correctAnswers;
 
     useEffect(() => {
         setSelectedOptions([]);
     }, [data]);
     const selectOption = (selectedOption, target) => {
+        setDisplayNoAnswerWarning(false);
         if (selectedOptions.includes(selectedOption)) {
             setSelectedOptions((currentSelectedOptions) => {
                 return currentSelectedOptions.filter(option => option !== selectedOption);
@@ -78,6 +80,14 @@ export default function QuestionBox({data, submitHandler, skipHandler}) {
         }
     }
 
+    const showAnswerWarning = () => {
+        if (displayNoAnswerWarning) {
+            return (
+                <p>Selectează cel puțin un răspuns pentru a trimite.</p>
+            )
+        }
+    }
+
     return (
         <div className='question-box'>
             <div className='question-title-container'>
@@ -98,6 +108,7 @@ export default function QuestionBox({data, submitHandler, skipHandler}) {
                 {showImage()}
                 {showImagePopup()}
             </div>
+            {showAnswerWarning()}
             <div className='buttons'>
                 <div className='skip-question-button-container'>
                     <button className='skip-question-button' type='submit' onClick={skipHandler}>
@@ -107,7 +118,7 @@ export default function QuestionBox({data, submitHandler, skipHandler}) {
                 <div className='submit-answers-button-container'>
                     <button className='submit-answers-button' type='submit' onClick={() => {
                         if (selectedOptions.length === 0) {
-                            return;
+                            setDisplayNoAnswerWarning(true);
                         } else {
                             submitHandler(checkAnswer());
                         }

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/quiz-app/static/css/main.437502bf.css",
-    "main.js": "/quiz-app/static/js/main.8137ffc5.js",
+    "main.js": "/quiz-app/static/js/main.52b287aa.js",
     "static/js/787.9e90ff23.chunk.js": "/quiz-app/static/js/787.9e90ff23.chunk.js",
     "static/media/lanturi.png": "/quiz-app/static/media/lanturi.a927abd1ff19ac4d6f89.png",
     "static/media/pista-biciclete-pietoni.png": "/quiz-app/static/media/pista-biciclete-pietoni.a1c0a108ccc09309d11f.png",
@@ -93,11 +93,11 @@
     "static/media/pan-suc-curba-deosebit-periculoasa.png": "/quiz-app/static/media/pan-suc-curba-deosebit-periculoasa.3301f13da60665750254.png",
     "index.html": "/quiz-app/index.html",
     "main.437502bf.css.map": "/quiz-app/static/css/main.437502bf.css.map",
-    "main.8137ffc5.js.map": "/quiz-app/static/js/main.8137ffc5.js.map",
+    "main.52b287aa.js.map": "/quiz-app/static/js/main.52b287aa.js.map",
     "787.9e90ff23.chunk.js.map": "/quiz-app/static/js/787.9e90ff23.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.437502bf.css",
-    "static/js/main.8137ffc5.js"
+    "static/js/main.52b287aa.js"
   ]
 }

@@ -6,12 +6,12 @@
 }
 
 .zone-card {
-    background-color: #0761ac;
-    background: radial-gradient(circle, rgba(7,97,172,1) 42%, rgba(7,87,153,1) 100%);
+    background-color: #0060ACFF;
+    background: radial-gradient(circle, rgb(0, 96, 172) 42%, rgba(7,87,153,1) 100%);
     padding: 5%;
     border-radius: 25px;
-    -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.32);
-    box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.32);
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(0, 96, 172, 0.32);
+    box-shadow: 5px 5px 0px 0px rgba(0, 96, 172, 0.32);
 }
 
 .zone-card:hover {

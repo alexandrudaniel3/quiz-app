@@ -1,4 +1,5 @@
 .quiz-page {
+    color: #0060ac;
     padding-left: 10%;
     padding-right: 10%;
     height: 100%;
@@ -7,15 +8,16 @@
 
 .quiz-page-start-button, .test-reset-button {
     height: 70px;
-    width: 150px;
+    color: #0060ac;
+    width: 160px;
     font-size: xx-large;
     font-weight: bold;
-    border: 2px solid;
+    border: 2px solid #0060ac;
     border-radius: 10px;
     background: white;
     margin: 0 0 20px 0;
-    -webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.32);
-    box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.32);
+    -webkit-box-shadow: 3px 3px 0px 0px rgba(0, 96, 172, 0.32);
+    box-shadow: 3px 3px 0px 0px rgba(0, 96, 172, 0.32);
 }
 
 .quiz-page-start-button:hover, .test-reset-button:hover {

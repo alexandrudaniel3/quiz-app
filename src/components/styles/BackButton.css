@@ -1,7 +1,3 @@
-* {
-    /*border: dashed 1px;*/
-}
-
 .back-button-container {
     width: 310px;
     margin: 0;
@@ -13,17 +9,19 @@
     background-image: url("../../assets/back-button.png");
     background-size: cover;
     border-radius: 10px;
-    -webkit-box-shadow: 3px 3px 0px 0px rgba(0, 96, 172, 0.32);
-    box-shadow: 3px 3px 0px 0px rgba(0, 96, 172, 0.32);
+    box-shadow: 3px 3px 6px rgba(0, 96, 172, 0.32);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .back-button-wrapper:hover {
     cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 3px 3px 10px rgba(0, 96, 172, 0.5);
 }
 
 .back-button-wrapper:active {
-    margin: 3px auto auto 3px;
-    -webkit-box-shadow: none;
+    transform: scale(0.95);
     box-shadow: none;
 }
 

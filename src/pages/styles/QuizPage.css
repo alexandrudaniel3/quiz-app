@@ -16,19 +16,19 @@
     border-radius: 10px;
     background: white;
     margin: 0 0 20px 0;
-    -webkit-box-shadow: 3px 3px 0px 0px rgba(0, 96, 172, 0.32);
-    box-shadow: 3px 3px 0px 0px rgba(0, 96, 172, 0.32);
+    box-shadow: 3px 3px 6px rgba(0, 96, 172, 0.32);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .quiz-page-start-button:hover, .test-reset-button:hover {
     background: rgb(224, 224, 224);
     cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 3px 3px 10px rgba(0, 96, 172, 0.5);
 }
 
 .quiz-page-start-button:active, .test-reset-button:active {
-    margin-top: 3px;
-    margin-left: 3px;
-    -webkit-box-shadow: none;
+    transform: scale(0.95);
     box-shadow: none;
 }
 

@@ -1,9 +1,8 @@
 .white-card {
     border: 2px solid #0060ACFF;
     color: #0060ACFF;
-    border-radius: 25px;
+    border-radius: 15px;
     margin: 20px;
     padding: 20px;
-    -webkit-box-shadow: 5px 5px 0px 0px rgba(0, 96, 172, 0.32);
-    box-shadow: 5px 5px 0px 0px rgba(0, 96, 172, 0.32);
+    box-shadow: 0 4px 6px rgba(0, 96, 172, 0.3);
 }

@@ -58,6 +58,7 @@
 .option-value {
     font-size: medium;
     width: 90%;
+    color: black;
 }
 
 @media only screen and (max-width: 700px) {
